@@ -154,6 +154,32 @@ WHERE category_id IN
 
 -- QUESTION 7E
 
+SELECT title, rental_duration FROM film
+GROUP BY title ORDER BY rental_duration;
+
+-- QUESTION 7F (Most likely not correct)
+
+SELECT store.store_id, SUM(payment.amount) AS 'Total Sales' FROM store
+INNER JOIN payment
+GROUP BY store_id;
+
+
+-- QUESTION 7G (Incorrect, unsure how to debug)
+
+SELECT st.store_id, city.city, country.country FROM store st
+JOIN country
+JOIN store
+JOIN city ON country.country_id = city.country_id
+GROUP BY city;
+
+-- QUESTION 7H
+
+SELECT category.name, 
+
+
+
+
+
 
 
 
